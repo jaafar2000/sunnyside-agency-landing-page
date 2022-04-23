@@ -1,0 +1,46 @@
+footer{
+    @include breakpoint-up(medium){
+        margin-top: 0px;
+    }
+    background-color: #90d4c5;
+    height: fit-content;
+    & .logo{
+        margin-top: 1.25rem;
+        margin-bottom: 1.25rem;
+        color: #2c7566;
+        filter: invert(59%) sepia(60%) saturate(230%) hue-rotate(118deg) brightness(96%) contrast(92%);
+    }
+    & .footer__links{
+        & ul{
+            & li {
+                a{
+                    padding: 0.625rem;
+                    color: #2c7566;
+                    border-bottom: 2px solid transparent;
+                    transition: 300ms;
+                    display: block;
+                    &:hover{
+                        cursor: pointer;
+                        border-color: $White;
+                        color: $White;
+                    }
+                }
+            }
+        } 
+    }
+    & .social{
+        & img{
+            padding: 0.625rem;
+            margin: 20px 20px 30px ;
+            border-bottom:3px solid transparent ;
+            transition: 300ms;
+            &:hover{
+                cursor: pointer;
+                border-color: $White;
+                color: $White;
+                
+            }
+        }
+    }
+
+}

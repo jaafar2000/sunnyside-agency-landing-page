@@ -1,0 +1,136 @@
+.hero{
+	margin-bottom: 3.125rem;
+	display: grid;
+	grid-template-columns:  repeat(auto-fill, minmax(18.75rem, 1fr));
+	@include breakpoint-up(medium){
+		display: grid;
+		grid-template-columns:  repeat(auto-fill, minmax(37.5rem, 1fr));
+		
+	}
+	    & .egg__info a::after{
+		background-color: $lightYellow;
+	}	& .cup__info a::after{
+		background-color: $lightPink;
+	}   & .egg__info a:hover::after{
+		background-color:$yellow ;
+	}
+	    & .cup__info a:hover::after{
+			background-color:$pink ;
+	}
+
+
+   
+	& .img{
+		min-width: 50%;
+		height: 37.5rem;
+	}
+
+  & .info {
+		text-align: center;
+		padding: 4.375rem 0rem;
+		& h1 {
+      font-family: 'Fraunces', serif;
+			font-weight: 900;
+			font-size: 30px;	
+			margin-bottom: 3.125rem;
+		}
+		& p{
+      color: $Grayishblue;
+			font-size: 20px;
+			margin-bottom: 1.875rem;
+
+		}
+		& a{
+			font-size: 20px;
+			font-family: 'Fraunces', serif;
+			color: black;
+			font-weight: 900;
+			position: relative;
+			&::after{
+				content: "";
+				position: absolute;
+				bottom: 1px;
+				left: 0;
+				width: 100%;
+				height: 7px;
+				border-radius: 30px;
+				z-index: -1;
+				transition: 300ms;
+
+			}
+			
+		}
+	}
+	& .egg{
+		background-image: url("../images/mobile/image-transform.jpg");
+		background-size: cover;
+		background-position: center center;
+		@include breakpoint-up(medium){
+      background-image: url("../images/desktop/image-transform.jpg");
+			background-size: cover;
+			background-position: center center;
+			
+		}
+
+	}
+	& .cup{
+		background-image: url("../images/mobile/image-stand-out.jpg");
+		background-size: cover;
+		background-position: center center;
+		@include breakpoint-up(medium){
+      background-image: url("../images/mobile/image-stand-out.jpg");
+			background-size: cover;
+			background-position: center center;
+			order: 2;
+		
+			
+		}
+	}
+	& .cherry,.orange{
+    min-width: 372px;
+    order: 6;
+    background-repeat: no-repeat;
+    background-size: cover;
+		text-align: center;
+		& h1{
+        font-family: 'Fraunces', serif;
+			margin-top: 400px;
+			margin-bottom: 50px;
+
+		}
+		& p{
+        width: 320px;
+			line-height: 1.5;
+			margin-bottom: 50px;
+		}
+
+}	
+
+  & .cherry{
+    background-image: url("../images/mobile/image-graphic-design.jpg");
+    color:  #295e54;
+		@include breakpoint-up(medium){
+      background-image: url("../images/desktop/image-graphic-design.jpg");
+			background-size: cover;
+			background-position: center center;
+			
+			
+		}
+	}
+  & .orange{
+	background-image: url("../images/mobile/image-photography.jpg");
+  color: #1d5669;
+	@include breakpoint-up(medium){
+		background-image: url("../images/desktop/image-photography.jpg");
+		background-size: cover;
+		background-position: center center;
+
+	
+		
+	}
+}
+
+	}
+
+
+

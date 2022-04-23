@@ -1,0 +1,51 @@
+.client__testemonials{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  
+	& .container  > h1{
+		text-align: center;
+		font-family: 'Fraunces', serif;
+		color: $Darkgrayishblue;
+		margin-bottom: 3.125rem;
+		font-size: 20px;
+	}
+	& .box{
+		@include breakpoint-up(medium){
+			display: grid;
+			grid-template-columns:  repeat(auto-fill, minmax(320px, 1fr));
+
+		}
+    & .inner__box{
+			margin-bottom: 4.0625rem;
+			.name{
+				order: 4;
+				& h1{
+          font-family: 'Fraunces', serif;
+					font-size: 20px;
+					margin-bottom: 1.25rem;
+				}
+				& p{
+					color: $Grayishblue;
+				}
+			}
+			& .personal__photo{
+				width: 8.75rem;
+				height: 8.75rem;
+				border-radius: 50%;
+				overflow: hidden;
+				margin-bottom: 2.5rem;
+			}
+      & .personal__info{
+				& p{
+					color: $Verydarkgrayishblue;
+					text-align: center;
+					margin: 0 auto 2.5rem ;
+					line-height: 1.6;
+					width: 70%;
+					font-size: 20px;
+				}
+			}
+		}
+	}
+}

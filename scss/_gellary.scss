@@ -1,0 +1,48 @@
+.gellary{
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	@include breakpoint-up(large){
+		height:37.5rem ;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	& .img{
+		min-height: 12.5rem;
+		background-position: center;
+        background-repeat: no-repeat;
+		background-size: cover;
+		@include breakpoint-up(medium){
+			min-height: 19.375rem;
+			background-position: center;
+		}
+	}
+	& .milk{
+		background-image: url("../images/mobile/image-gallery-milkbottles.jpg");
+		@include breakpoint-up(large){
+			background-image: url("../images/desktop/image-gallery-milkbottles.jpg");
+		}
+
+	}
+	& .orange{
+		background-image: url("../images/mobile/image-gallery-orange.jpg");
+		@include breakpoint-up(large){
+			background-image: url("../images/desktop/image-gallery-orange.jpg");
+		}
+	}
+	& .cone{
+		background-image: url("../images/mobile/image-gallery-cone.jpg");
+		@include breakpoint-up(large){
+			background-image: url("../images/desktop/image-gallery-cone.jpg");
+		}
+	}
+	& .sugar{
+		background-image: url("../images/mobile/image-gallery-sugar-cubes.jpg");
+		@include breakpoint-up(large){
+			background-image: url("../images/desktop/image-gallery-sugarcubes.jpg");
+		}
+	}
+
+
+
+}
